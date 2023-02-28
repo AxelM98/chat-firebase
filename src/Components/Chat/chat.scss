@@ -1,0 +1,30 @@
+@import "../../variables.css";
+
+.chat{
+    flex: 2;
+
+    .chatInfo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--gray);
+        color: var(--lightergray);
+        padding:  10px;
+        height: 50px;
+
+        .chatIcons{
+            display: flex;
+            gap: 10px;
+
+            .icon{
+                font-size: 30px;
+                cursor: pointer;
+                transition: all .5s ease;
+                &:hover{
+                    transform: scale(1.1);
+                    color: white;
+                }
+            }
+        }
+    }
+}

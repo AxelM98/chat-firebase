@@ -1,0 +1,28 @@
+@import "../../variables.css";
+
+.messages {
+  background-color: var(--lightergold);
+  padding: 10px;
+  height: calc(100% - 160px);
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  position: relative;
+  .earlierBtn {
+    padding: 5px 40px;
+    border-radius: 1.5em;
+    background-color: var(--darkgold);
+    color: var(--lightergold);
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid var(--gold);
+    cursor: pointer;
+    transition: all .5s ease;
+    &:hover{
+      background-color:#e2b41c;
+    }
+  }
+}

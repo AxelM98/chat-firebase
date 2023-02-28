@@ -1,0 +1,61 @@
+/*  @import "../../variables.css";
+
+.input {
+  background-color: white;
+  padding: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  input {
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: var(--darkgold);
+    &::placeholder {
+      color: var(--lightgray);
+    }
+  }
+
+  .send {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .icon {
+      font-size: 30px;
+      cursor: pointer;
+      color: var(--gray);
+    }
+
+    button {
+      gap: 10px;
+      font-weight: bold;
+      border: none;
+      color: white;
+      text-transform: uppercase;
+      padding: 12px 23px;
+      padding-right: 20px;
+      border-radius: 5px;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      background-color: var(--gray);
+      &:hover {
+        background-color: rgb(128, 128, 128);
+        transform: scale(1.05);
+      }
+      &.green {
+        background-color: var(--green);
+        &:hover {
+          background-color: rgb(1, 164, 1);
+        }
+      }
+      .sendIcon {
+        transform: rotate(-40deg);
+        font-size: 30px;
+      }
+    }
+  }
+} */

@@ -1,0 +1,40 @@
+@import "../../variables.css";
+
+@mixin mobile{
+    @media screen and (max-width: 480px) {
+        @content
+    }
+}
+
+@mixin tablet{
+    @media screen and (max-width: 768px) {
+        @content
+    }
+}
+
+@mixin laptop{
+    @media screen and (max-width: 120px) {
+        @content
+    }
+}
+
+.home{
+    background-color: var(--lightgold);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container{
+        border-radius: 10px;
+        width: 65%;
+        height: 80%;
+        box-shadow: 0px 3px 15px rgba(0,0,0,0.7);
+        display: flex;
+        overflow: hidden;
+
+        @include tablet{
+            width: 90%;
+        }
+    }
+}

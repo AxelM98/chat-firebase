@@ -1,0 +1,76 @@
+@import "../../variables.css";
+
+@mixin tablet{
+  @media screen and (max-width: 768px) {
+      @content
+  }
+}
+
+.search {
+  border-bottom: 1px solid var(--lightgray);
+  display: flex;
+  flex-direction: column;
+
+  .searchForm {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .icon{
+      color: var(--lightergray);
+      font-size: 20px;
+    }
+
+    input {
+      background-color: transparent;
+      border: none;
+      color: white;
+      outline: none;
+      &::placeholder {
+        color: var(--lightergray);
+      }
+    }
+  }
+  .error{
+    color: red;    
+    text-align: center;
+  }
+}
+
+.userChat {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: var(--darkgray);
+  }
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .userChatInfo {
+    span {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    p {
+      max-width: 280px;
+      font-size: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--lightergray);
+
+      @include tablet{
+        max-width: 50px;
+      }
+    }
+  }
+}
