@@ -10,7 +10,11 @@ const Message = ({ message }) => {
   const ref = useRef();
 
   useEffect(() => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
+    ref.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
   }, [message]);
 
   /*   function convertDateToTime(dateObj) {
@@ -55,14 +59,15 @@ const Message = ({ message }) => {
       className={`message ${message.senderId === currentUser.uid && "owner"}`}
     >
       <div className="messageInfo">
-        <img className="image"
+        <img
+          className="image"
           src={
             message.senderId === currentUser.uid
               ? currentUser.photoURL
               : data.user.photoURL
           }
         />
-        <span className="timestamp" >{timestamp}</span>
+        <span className="timestamp">{timestamp}</span>
       </div>
       <div className="messageContent">
         <p>{message.text}</p>

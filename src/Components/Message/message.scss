@@ -1,4 +1,4 @@
-@import "../../variables.css";
+@import "../../variables.scss";
 
 @mixin mobile {
   @media screen and (max-width: 480px) {
@@ -26,7 +26,7 @@
   .messageInfo {
     display: flex;
     flex-direction: column;
-    color: var(--gray);
+    color: $gray;
     font-weight: 300;
     font-size: 14px;
     flex-wrap: wrap;
@@ -40,7 +40,7 @@
     }
     .timestamp {
       font-size: 12px;
-      white-space:pre-line;
+      white-space: pre-line;
       max-width: 60px;
       text-align: left;
       margin-top: 5px;
@@ -55,13 +55,13 @@
     gap: 10px;
     overflow: hidden;
     p {
-      background-color: var(--lightergray);
+      background-color: $lightergray;
       padding: 10px 20px;
       border-radius: 20px 20px 20px 0px;
-      border: 2px solid var(--gray);
+      border: 2px solid $gray;
       max-width: 200px;
-      word-wrap: break-word; 
-      @include tablet{
+      word-wrap: break-word;
+      @include tablet {
         max-width: 130px;
       }
     }
@@ -88,10 +88,10 @@
     .messageContent {
       align-items: flex-end;
       p {
-        background-color: var(--darkgold);
+        background-color: $darkgold;
         color: white;
         border-radius: 20px 20px 0px 20px;
-        border: 3px solid var(--gold);
+        border: 3px solid $gold;
       }
     }
   }

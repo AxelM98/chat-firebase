@@ -1,13 +1,13 @@
-@import "../../variables.css";
+@import "../../variables.scss";
 
-@mixin tablet{
+@mixin tablet {
   @media screen and (max-width: 768px) {
-      @content
+    @content;
   }
 }
 
 .search {
-  border-bottom: 1px solid var(--lightgray);
+  border-bottom: 1px solid $lightgray;
   display: flex;
   flex-direction: column;
 
@@ -17,8 +17,8 @@
     align-items: center;
     gap: 5px;
 
-    .icon{
-      color: var(--lightergray);
+    .icon {
+      color: $lightergray;
       font-size: 20px;
     }
 
@@ -28,12 +28,12 @@
       color: white;
       outline: none;
       &::placeholder {
-        color: var(--lightergray);
+        color: $lightergray;
       }
     }
   }
-  .error{
-    color: red;    
+  .error {
+    color: red;
     text-align: center;
   }
 }
@@ -47,7 +47,7 @@
   cursor: pointer;
   transition: all 0.5s ease;
   &:hover {
-    background-color: var(--darkgray);
+    background-color: $darkgray;
   }
   img {
     width: 50px;
@@ -66,9 +66,9 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      color: var(--lightergray);
+      color: $lightergray;
 
-      @include tablet{
+      @include tablet {
         max-width: 50px;
       }
     }

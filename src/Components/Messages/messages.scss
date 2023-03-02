@@ -1,7 +1,25 @@
-@import "../../variables.css";
+@import "../../variables.scss";
+
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: 120px) {
+    @content;
+  }
+}
 
 .messages {
-  background-color: var(--lightergold);
+  background-color: $lightergold;
   padding: 10px;
   height: calc(100% - 160px);
   overflow-y: scroll;
@@ -9,20 +27,24 @@
     display: none;
   }
   position: relative;
-  .earlierBtn {
+  .btn {
     padding: 5px 40px;
     border-radius: 1.5em;
-    background-color: var(--darkgold);
-    color: var(--lightergold);
+    background-color: $darkgold;
+    color: $lightergold;
     position: absolute;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    border: 3px solid var(--gold);
+    border: 3px solid $gold;
     cursor: pointer;
-    transition: all .5s ease;
-    &:hover{
-      background-color:#e2b41c;
+    transition: all 0.5s ease;
+    outline: none;
+    &:hover {
+      background-color: #e2b41c;
+    }
+    @include tablet {
+      padding: 5px 10px;
     }
   }
 }

@@ -11,7 +11,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [err, setErr] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -50,7 +50,7 @@ const Register = () => {
               photoURL: downloadURL,
             });
             await setDoc(doc(db, "userChats", res.user.uid), {});
-            navigate("/")
+            navigate("/");
           });
         }
       );
@@ -76,7 +76,12 @@ const Register = () => {
           <button>Sign Up</button>
           {err && <span className="error">Someting Went Wrong!</span>}
         </form>
-        <p>Already have an account? <Link to="/login" className='link'>Log In</Link></p>
+        <p>
+          Already have an account?{" "}
+          <Link to="/login" className="link">
+            Log In
+          </Link>
+        </p>
       </div>
     </div>
   );

@@ -80,7 +80,7 @@ const Search = () => {
   return (
     <div className="search">
       <div className="searchForm">
-          <SearchIcon className="icon"/>
+        <SearchIcon className="icon" />
         <input
           type="text"
           placeholder="Find User"

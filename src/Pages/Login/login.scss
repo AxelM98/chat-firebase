@@ -1,7 +1,7 @@
-@import "../../variables.css";
+@import "../../variables.scss";
 
 .formContainer {
-  background-color: var(--lightgold); // Gradient fixa
+  background-color: $lightgold;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -17,12 +17,12 @@
     gap: 10px;
 
     .logo {
-      color: var(--darkgold);
+      color: $darkgold;
       font-weight: bold;
       font-size: 25px;
     }
     .heading {
-      color: var(--darkgold);
+      color: $darkgold;
       font-weight: 500;
       font-size: 15px;
     }
@@ -37,9 +37,9 @@
         border: none;
         outline: none;
         width: 280px;
-        border-bottom: 1px solid var(--lightgold);
+        border-bottom: 1px solid $lightgold;
         &::placeholder {
-          color: var(--lightgray);
+          color: $lightgray;
         }
       }
       label {
@@ -48,11 +48,11 @@
         gap: 10px;
         cursor: pointer;
         .icon {
-          color: var(--gold);
+          color: $gold;
           font-size: 50px;
         }
         span {
-          color: var(--darkgold);
+          color: $darkgold;
         }
       }
       button {
@@ -67,7 +67,7 @@
         margin: 10px 0;
         cursor: pointer;
         &:hover {
-          background-color: var(--darkgray);
+          background-color: $darkgray;
           transform: scale(1.05);
         }
       }
@@ -79,7 +79,7 @@
       }
     }
     p {
-      color: var(--darkgold);
+      color: $darkgold;
       font-size: 12px;
 
       .link {
@@ -87,7 +87,7 @@
         font-weight: 600;
         transition: all 0.5s ease;
         &:hover {
-          color: var(--gray);
+          color: $gray;
         }
       }
     }
